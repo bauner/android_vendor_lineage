@@ -1,5 +1,8 @@
 package android
 type Product_variables struct {
+	Has_legacy_camera_hal1 struct {
+		Cflags []string
+        }
         Use_samsung_colorformat struct {
                 Cflags []string
         }
@@ -41,6 +44,7 @@ type Product_variables struct {
 }
 
 type ProductVariables struct {
+	Has_legacy_camera_hal1  *bool `json:",omitempty"`
 	Use_samsung_colorformat    *bool `json:",omitempty"`
 	Requires_synchronous_setsurface    *bool `json:",omitempty"`
 	Disable_ashmem_tracking    *bool `json:",omitempty"`
