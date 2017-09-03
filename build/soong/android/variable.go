@@ -1,8 +1,12 @@
 package android
 type Product_variables struct {
+	Exynos4_enhancements struct {
+		Cflags []string
+		Cppflags []string
+	}
 	Has_legacy_camera_hal1 struct {
 		Cflags []string
-	}
+        }
 	Needs_legacy_camera_hal1_dyn_native_handle struct {
 		Cppflags []string
 	}
@@ -28,6 +32,7 @@ type Product_variables struct {
 }
 
 type ProductVariables struct {
+	Exynos4_enhancements    *bool `json:",omitempty"`
 	Has_legacy_camera_hal1  *bool `json:",omitempty"`
 	Needs_legacy_camera_hal1_dyn_native_handle  *bool `json:",omitempty"`
 	Needs_text_relocations  *bool `json:",omitempty"`
