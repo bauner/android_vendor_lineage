@@ -1,5 +1,8 @@
 package android
 type Product_variables struct {
+	Egl_needs_handle struct {
+		Cppflags []string
+	}
 	Egl_workaround_bug_10194508 struct {
 		Cppflags []string
 	}
@@ -22,6 +25,7 @@ type Product_variables struct {
 }
 
 type ProductVariables struct {
+	Egl_needs_handle    *bool `json:",omitempty"`
 	Egl_workaround_bug_10194508    *bool `json:",omitempty"`
 	Exynos4_enhancements    *bool `json:",omitempty"`
 	Needs_text_relocations  *bool `json:",omitempty"`
