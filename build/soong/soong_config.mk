@@ -4,6 +4,7 @@ lineage_soong:
 	$(hide) (\
 	echo '{'; \
 	echo '"Lineage": {'; \
+	echo '    "Disable_ashmem_tracking": $(if $(filter true,$(TARGET_DISABLE_ASHMEM_TRACKING)),true,false),'; \
 	echo '    "Allows_invalid_pthread": $(if $(filter true,$(TARGET_ALLOWS_INVALID_PTHREAD)),true,false),'; \
 	echo '    "Egl_needs_handle": $(if $(filter true,$(BOARD_EGL_NEEDS_HANDLE_VALUE)),true,false),'; \
 	echo '    "Egl_workaround_bug_10194508": $(if $(filter true,$(BOARD_EGL_WORKAROUND_BUG_10194508)),true,false),'; \
