@@ -1,5 +1,8 @@
 package android
 type Product_variables struct {
+        Requires_synchronous_setsurface struct {
+		Cflags []string
+        }
         Disable_ashmem_tracking struct {
 		Cflags []string
         }
@@ -44,6 +47,7 @@ type Product_variables struct {
 }
 
 type ProductVariables struct {
+	Requires_synchronous_setsurface    *bool `json:",omitempty"`
 	Disable_ashmem_tracking    *bool `json:",omitempty"`
 	Allows_invalid_pthread    *bool `json:",omitempty"`
 	Egl_needs_handle    *bool `json:",omitempty"`
