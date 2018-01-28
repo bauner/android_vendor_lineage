@@ -37,6 +37,9 @@ type Product_variables struct {
 	Uses_qcom_bsp_legacy struct {
 		Cppflags []string
 	}
+	Forced_shim_libs struct {
+		Cppflags []string
+	}
 }
 
 type ProductVariables struct {
@@ -53,4 +56,5 @@ type ProductVariables struct {
 	Target_shim_libs  *string `json:",omitempty"`
 	Uses_generic_camera_parameter_library  *bool `json:",omitempty"`
 	Uses_qcom_bsp_legacy  *bool `json:",omitempty"`
+	Forced_shim_libs  *string `json:",omitempty"`
 }

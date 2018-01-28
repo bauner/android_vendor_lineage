@@ -4,6 +4,7 @@ lineage_soong:
 	$(hide) (\
 	echo '{'; \
 	echo '"Lineage": {'; \
+	echo '    "Forced_shim_libs": "$(LINKER_FORCED_SHIM_LIBS)",'; \
 	echo '    "Has_legacy_camera_hal1": $(if $(filter true,$(TARGET_HAS_LEGACY_CAMERA_HAL1)),true,false),'; \
 	echo '    "Use_samsung_colorformat": $(if $(filter true,$(BOARD_USE_SAMSUNG_COLORFORMAT)),true,false),'; \
 	echo '    "Requires_synchronous_setsurface": $(if $(filter true,$(TARGET_REQUIRES_SYNCHRONOUS_SETSURFACE)),true,false),'; \
