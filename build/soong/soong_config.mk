@@ -4,6 +4,7 @@ lineage_soong:
 	$(hide) (\
 	echo '{'; \
 	echo '"Lineage": {'; \
+	echo '    "Use_samsung_colorformat": $(if $(filter true,$(BOARD_USE_SAMSUNG_COLORFORMAT)),true,false),'; \
 	echo '    "Requires_synchronous_setsurface": $(if $(filter true,$(TARGET_REQUIRES_SYNCHRONOUS_SETSURFACE)),true,false),'; \
 	echo '    "Disable_ashmem_tracking": $(if $(filter true,$(TARGET_DISABLE_ASHMEM_TRACKING)),true,false),'; \
 	echo '    "Allows_invalid_pthread": $(if $(filter true,$(TARGET_ALLOWS_INVALID_PTHREAD)),true,false),'; \
