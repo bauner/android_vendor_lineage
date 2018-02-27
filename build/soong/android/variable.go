@@ -1,5 +1,8 @@
 package android
 type Product_variables struct {
+        Use_samsung_colorformat struct {
+                Cflags []string
+        }
         Requires_synchronous_setsurface struct {
 		Cflags []string
         }
@@ -47,6 +50,7 @@ type Product_variables struct {
 }
 
 type ProductVariables struct {
+	Use_samsung_colorformat    *bool `json:",omitempty"`
 	Requires_synchronous_setsurface    *bool `json:",omitempty"`
 	Disable_ashmem_tracking    *bool `json:",omitempty"`
 	Allows_invalid_pthread    *bool `json:",omitempty"`
