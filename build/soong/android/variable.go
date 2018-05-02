@@ -43,7 +43,7 @@ type Product_variables struct {
 	Uses_qti_camera_device struct {
 		Cppflags []string
 		Shared_libs []string
-        }
+	}
 }
 
 type ProductVariables struct {
