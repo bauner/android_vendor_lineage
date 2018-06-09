@@ -1,5 +1,8 @@
 package android
 type Product_variables struct {
+        Force_screenshot_cpu_path struct {
+                Cppflags []string
+        }
         Use_samsung_colorformat struct {
                 Cflags []string
         }
@@ -50,6 +53,7 @@ type Product_variables struct {
 }
 
 type ProductVariables struct {
+	Force_screenshot_cpu_path    *bool `json:",omitempty"`
 	Use_samsung_colorformat    *bool `json:",omitempty"`
 	Requires_synchronous_setsurface    *bool `json:",omitempty"`
 	Disable_ashmem_tracking    *bool `json:",omitempty"`
